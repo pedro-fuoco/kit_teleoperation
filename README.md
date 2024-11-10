@@ -32,6 +32,13 @@ cd ~/ros2_ws/src/kit_teleoperation
 rosdep install --from-paths . -y --ignore-src
 ```
 
+### Instalação manual de bibliotecas
+Infelizmente, uma das bibliotecas utilizadas nesse pacote não está nos repositorios de indice do rosdep. Por conta disso, precisamos instala-la manualmente seguindo o seguinte comando:
+
+```bash
+pip install pynput
+```
+
 ### ROS DOMAIN ID
 Para que um computador consiga se comunicar com outro computador com ROS 2 na mesma rede, ambos precisam selecionar o mesmo ROS DOMAIN ID. Para isso, basta que esse comando seja feito em AMBOS os terminais, com {selecione seu identificador} sendo um número de 0 até 255.
 ```bash

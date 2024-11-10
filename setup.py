@@ -25,6 +25,7 @@ setup(
     entry_points={
         'console_scripts': [
             'view_compressed_node = kit_teleoperation.view_compressed_img:main',
+            'control_motors_node = kit_teleoperation.control_motors:main',
         ],
     },
 )
