@@ -14,6 +14,7 @@ setup(
         ('share/' + package_name, ['package.xml']),
         (os.path.join('share', package_name, 'launch'), glob('launch/*.py')),
         (os.path.join('share', package_name, 'rviz'), glob('rviz/*.rviz')),
+        (os.path.join('share', package_name, 'config'), glob('config/*.yaml')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -25,7 +26,8 @@ setup(
     entry_points={
         'console_scripts': [
             'view_compressed_node = kit_teleoperation.view_compressed_img:main',
-            'calibrate_camera_node = kit_teleoperation.calibrate_camera:main',
+            'calibrate_camera_intrinsic_node = kit_teleoperation.calibrate_camera_intrinsic:main',
+            'calibrate_camera_extrinsic_node = kit_teleoperation.calibrate_camera_extrinsic:main',
             'control_motors_node = kit_teleoperation.control_motors:main',
         ],
     },
